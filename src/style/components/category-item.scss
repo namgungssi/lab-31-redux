@@ -1,0 +1,16 @@
+#categoryHeader {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1em;
+}
+
+
+a#deleteButton {
+  text-decoration: none;
+  color: rgb(233, 28, 28);
+  padding: .5em;
+
+    &:hover {
+      color: rgb(104, 14, 14);
+    }
+}

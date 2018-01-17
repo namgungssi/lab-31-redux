@@ -9,28 +9,31 @@ describe('Reducer Test', () => {
   let category = {name: 'Selena', createDate: new Date(), id: uuid()};
   let state;
 
+
   test('add new category', () => {
     let action = {type: 'CATEGORY_ADD', payload: category};
-        state = reducer(state, action);
+    state = reducer(state, action);
 
-        expect(state.length).toEqual(1);
-        expect(state[0].name).toEqual('Selena');
+    expect(state.length).toEqual(1);
+    expect(state[0].name).toEqual('Selena');
   });
+
 
   test('update category', () => {
     let newCategory = {name: 'Gomez'};
-      state = reducer(state, {
-        type: 'CATEGORY_UPDATE',
-        payload: {
-          name: newCategory.name,
-          createDate: new Date(),
-          id: category.id,
-        }
-      });
+    state = reducer(state, {
+      type: 'CATEGORY_UPDATE',
+      payload: {
+        name: newCategory.name,
+        createDate: new Date(),
+        id: category.id,
+      }
+    });
 
-      expect(state[0].name).toEqual('Gomez');
-      expect(state.length).toEqual(1);
+    expect(state[0].name).toEqual('Gomez');
+    expect(state.length).toEqual(1);
   });
+
 
   test('remove category', () => {
     let catOne = {name: 'catOne', id: uuid()};

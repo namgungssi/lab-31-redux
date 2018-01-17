@@ -1,12 +1,12 @@
 import React from 'react';
-import Enzyme, {simulate, mount, shallow} from 'enzyme';
+import Enzyme from 'enzyme';
 import uuid from 'uuid/v1';
 import reducer from '../appState/reducer';
 
 
 
 describe('Reducer tests', () => {
-  let category = {name: 'Fabulous', createDate: new Date(), id: uuid()};
+  let category = {name: 'Pebbles', createDate: new Date(), id: uuid()};
   let state;
 
 

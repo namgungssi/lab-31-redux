@@ -49,6 +49,6 @@ describe('Reducer tests', () => {
     });
 
     expect(state.length).toEqual(2);
-    expect(state[0].name).toEqual('Dog2');
+    expect(state[0].name).toEqual('Dog1');
   });
 });

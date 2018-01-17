@@ -15,6 +15,6 @@ export default (state=emptyState, {type, payload}) => {
     return state.filter(item => item.id !== payload)
 
     default:
-    return state:
+    return state;
   }
 };

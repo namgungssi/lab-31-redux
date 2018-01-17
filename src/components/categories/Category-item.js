@@ -14,7 +14,7 @@ class CategoryItem extends React.Component {
       <div className="category-item">
       <header id="categoryHeader">
       <CategoryForm handler={this.props.handleUpdate} category={this.props.category}/>
-      <a id='deleteButton' href="#" onClick{()=>this.props.handleDelete(this.props.category.id)}>X</a>
+      <a id='deleteButton' href="#" onClick{ () => this.props.handleDelete(this.props.category.id) }>X</a>
       </header>
       </div>
     )

@@ -45,7 +45,7 @@ describe('Reducer tests', () => {
 
     state = reducer(state, {
       type: 'CATEGORY_DESTROY',
-      payload: dog1.id
+      payload: dog2.id
     });
 
     expect(state.length).toEqual(2);

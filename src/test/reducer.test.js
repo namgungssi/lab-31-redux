@@ -41,7 +41,7 @@ describe('Reducer tests', () => {
   test('remove a category', () => {
     let dog1 = {name: 'Dog1', id: uuid()};
     let dog2 = {name: 'Dog2', id: uuid()};
-    state = [{...cat1}, {...cat2}];
+    state = [{...dog1}, {...dog2}];
 
     state = reducer(state, {
       type: 'CATEGORY_DESTROY',

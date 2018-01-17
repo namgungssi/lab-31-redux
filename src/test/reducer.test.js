@@ -48,7 +48,7 @@ describe('Reducer tests', () => {
       payload: dog1.id
     });
 
-    expect(state.length).toEqual(1);
+    expect(state.length).toEqual(2);
     expect(state[0].name).toEqual('Dog2');
   });
 });

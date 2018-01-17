@@ -10,7 +10,7 @@ class CategoryForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  
+
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.props.handler, this.state);
@@ -28,7 +28,7 @@ class CategoryForm extends React.Component {
     return (
       <form className="categoryForm" onSubmit={this.handleSubmit}>
       <input
-      class='catInputs'
+      class='dogInputs'
       type="text"
       name="name"
       value={this.state.name}

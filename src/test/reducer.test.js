@@ -5,22 +5,24 @@ import reducer from '../appState/reducer';
 
 
 
-describe('Reducer Test', () => {
-  let category = {name: 'Selena', createDate: new Date(), id: uuid()};
+describe('Reducer tests', () => {
+  let category = {name: 'Fabulous', createDate: new Date(), id: uuid()};
   let state;
 
 
-  test('add new category', () => {
+
+  test('add a new category', () => {
     let action = {type: 'CATEGORY_ADD', payload: category};
     state = reducer(state, action);
 
     expect(state.length).toEqual(1);
-    expect(state[0].name).toEqual('Selena');
+    expect(state[0].name).toEqual('Pebbles');
   });
 
 
-  test('update category', () => {
-    let newCategory = {name: 'Gomez'};
+
+  test('update a category', () => {
+    let newCategory = {name: 'updated successfully'};
     state = reducer(state, {
       type: 'CATEGORY_UPDATE',
       payload: {
@@ -30,22 +32,23 @@ describe('Reducer Test', () => {
       }
     });
 
-    expect(state[0].name).toEqual('Gomez');
+    expect(state[0].name).toEqual('updated successfully');
     expect(state.length).toEqual(1);
   });
 
 
-  test('remove category', () => {
-    let catOne = {name: 'catOne', id: uuid()};
-    let catTwo = {name: 'catTwo', id: uuid()};
-    state = [{...catOne}, {...catTwo}];
+
+  test('remove a category', () => {
+    let dog1 = {name: 'Dog1', id: uuid()};
+    let dog2 = {name: 'Dog2', id: uuid()};
+    state = [{...cat1}, {...cat2}];
 
     state = reducer(state, {
-      type: 'CATEGORY_DESTORY',
-      payload: catOne.id
+      type: 'CATEGORY_DESTROY',
+      payload: cat1.id
     });
 
     expect(state.length).toEqual(1);
-    expect(state[0].name).toEqual('catTwo');
+    expect(state[0].name).toEqual('Dog2');
   });
 });

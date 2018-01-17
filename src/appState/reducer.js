@@ -2,7 +2,7 @@ const emptyState = [];
 
 
 
-export defaut (state=emptyState, {type, payload}) => {
+export default (state=emptyState, {type, payload}) => {
   switch(type) {
 
     case "CATEGORY_ADD":

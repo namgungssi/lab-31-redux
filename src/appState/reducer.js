@@ -11,7 +11,7 @@ export default (state=emptyState, {type, payload}) => {
     case "CATEGORY_UPDATE":
     return state.map(item => item.id === payload.id ? payload: item);
 
-    case "CATEGORY_DESTORY":
+    case "CATEGORY_DESTROY":
     return state.filter(item => item.id !== payload)
 
     default:
